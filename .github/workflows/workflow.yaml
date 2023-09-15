@@ -8,3 +8,9 @@ jobs:
     steps:
       - name: List of the GitHub Actions environment variables on Ubuntu
         run: env
+
+      - name: List Github Sha
+        run: |
+          echo "$GITHUB_SHA"
+          echo "echo ${GITHUB_SHA::7}"
+          echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`"
