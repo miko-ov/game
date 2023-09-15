@@ -1,10 +1,10 @@
 name: Publish GitHub Actions Artifacts Example
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 jobs:
   github-actions-environment-variables-ubuntu:
     runs-on: ubuntu-latest
     steps:
-      - name: List of the GitHub Actions environment variables on Windows
+      - name: List of the GitHub Actions environment variables on Ubuntu
         run: env
