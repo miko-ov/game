@@ -6,6 +6,16 @@ jobs:
   github-actions-environment-variables-ubuntu:
     runs-on: ubuntu-latest
     steps:
+      - name: 'Automated Version Bump'
+        id: version-bump
+        uses: 'phips28/gh-action-bump-version@master'
+        with:
+          major-wording:  'major'
+          minor-wording:  'feat'
+          patch-wording:  'fix, build, ci, docs, perf, refactor, style'
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          
       - name: List of the GitHub Actions environment variables on Ubuntu
         run: env
 
