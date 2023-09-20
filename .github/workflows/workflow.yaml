@@ -14,7 +14,7 @@ jobs:
           minor-wording:  'feat'
           patch-wording:  'fix, build, ci, docs, perf, refactor, style'
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: List of the GitHub Actions environment variables on Ubuntu
         run: env
